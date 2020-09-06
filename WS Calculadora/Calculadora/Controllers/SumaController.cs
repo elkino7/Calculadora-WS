@@ -13,10 +13,16 @@ namespace Calculadora.Controllers
     public class SumaController : ControllerBase
     {
         //Controlador encargado de realizar la suma
-        [HttpPost]
-        public async Task<Int32> Post(int OperandoUno, int OperandoDos) {
-            var Resultado = OperandoUno + OperandoDos;
+        [HttpGet]
+        public async Task<Int32> Get(int Op1, int Op2) {
+            var Resultado = Op1 + Op2;
             return Resultado;
         }
+        //[HttpGet]
+        //public async Task<Int32> Get()
+        //{
+        //    var Resultado = 239 + 234;
+        //    return Resultado;
+        //}
     }
 }
